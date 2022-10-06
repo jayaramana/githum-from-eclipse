@@ -19,7 +19,8 @@ public class ProductCatalogApplication {
 	}
 	
 //http://localhost:8005/swagger-ui/index.html
-	
+
+	/* Swagger code Started */
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select().apis(
@@ -36,6 +37,8 @@ public class ProductCatalogApplication {
                 .license("MIT License")
                 .licenseUrl("https://opensource.org/licenses/MIT")
                 .build();
-    }    
+    } 
+	
+	/* Swagger code Ends */
    
 }
