@@ -27,5 +27,11 @@ public class DemoController {
 		return "Ohm Sree Muruga Potri !!!!"+x;
 	
 	}
+	
+	@GetMapping("/sivam")
+	public String hellosivam() {
+		return "Ohm Namasivaya !!!!";
+	
+	}
 
 }
