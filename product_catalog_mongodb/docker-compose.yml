@@ -5,10 +5,18 @@ services:
    container_name: mongodb_product
    ports:
     - 27017:27017
- product_catalog_mongodb: 
+   networks:
+    - product_shop_net
+ productcatalogmongodb: 
    image: "jayaramana/product_catalog_mongodb:v1.0"
-   container_name: product_catalog_mongodb
+   container_name: productcatalogmongodb
    ports:
     - 8006:8006
    links:
     - mongodb_product
+   networks:
+    - product_shop_net
+networks:
+  product_shop_net:
+    driver: bridge
+    external: true

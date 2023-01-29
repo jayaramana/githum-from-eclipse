@@ -30,6 +30,7 @@ public class ProductCatalogService {
 
     @GetMapping("/product/{id}")
     public Product getProductDetails(@PathVariable  String id){
+    	System.out.println("getProductDetails "+id);
         return mongoTemplate.findById(id,Product.class);
     }
 
